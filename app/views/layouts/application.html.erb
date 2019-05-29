@@ -7,15 +7,33 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   </head>
   <body>
     <header>
-      <ul class="hmenu">
-        <%= link_to('Home', :root) %>
-        <%= render 'devise/menu/registration_items' %>
-        <%= render 'devise/menu/login_items' %>
-        <%= render 'shopping_carts/shopping_cart' %>
-      </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+          <a class="fas fa-search-dollar" href="http://localhost:3000/" style="font-size: 40px"></a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active "style="margin-left:15px">
+                <a class="nav-link"><%= link_to('Home', :root) %> 
+              
+
+                <a class="nav-link"><%= render 'devise/menu/registration_items' %></a>
+
+                <a class="nav-link"><%= render 'devise/menu/login_items' %></a>
+
+                <a class="nav-link"><%= render 'shopping_carts/shopping_cart' %></a>
+              </li>
+            </ul>
+            
+            
+        </nav>
+        
+        
+        
+        
+      
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     </header>
